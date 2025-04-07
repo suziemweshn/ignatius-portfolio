@@ -12863,7 +12863,7 @@ textarea.form-control {
     }
 
     .ftco-navbar-light .navbar-collapse.show {
-        max-height: 400px;
+        max-height: 500px;
         opacity: 1;
         padding: 15px 0;
     }
