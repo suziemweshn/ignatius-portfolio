@@ -596,8 +596,21 @@ pre code {
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+
     }
-}
+     .ftco-section {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    
+    .ftco-no-pb {
+      padding-bottom: 0;
+    }
+    
+    .ftco-about {
+      padding-top: 50px;
+    }
+}*/
 
 @media (min-width: 992px) {
     .container {
@@ -2061,6 +2074,18 @@ pre code {
     .table-responsive-md>.table-bordered {
         border: 0;
     }
+    .ftco-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      
+      .ftco-no-pb {
+        padding-bottom: 0;
+      }
+      
+      .ftco-about {
+        padding-top: 50px;
+      }
 }
 
 @media (max-width: 991.98px) {
@@ -11350,11 +11375,33 @@ h5,
     .hero-wrap .slider-text .one-forth {
         height: 600px;
     }
-}
+    .hero-wrap {
+        height: auto;
+        padding: 100px 0;
+      }
+      
+      .hero-wrap .slider-text {
+        height: auto;
+      }
+    
+      .ftco-about {
+        padding-top: 50px;
+      }
+    }
+    
+
+    
+    .ftco-section {
+      padding: 7em 0;
+      position: relative;
+    }
+    
+
 
 .hero-wrap .slider-text .one-forth .text {
     position: relative;
 }
+
 
 @media (min-width: 992px) {
     .hero-wrap .slider-text .one-forth .text {
@@ -12017,7 +12064,25 @@ h5,
         background: transparent;
         display: none;
     }
-}
+    .ftco-section {
+        padding: 6em 0;
+      }
+    }
+    
+   
+    
+    .ftco-no-pb {
+      padding-bottom: 0 !important;
+    }
+    
+    .ftco-footer {
+      font-size: 16px;
+      background: #000000;
+      padding: 7em 0;
+      z-index: 0;  
+    }
+    
+
 
 .form-control {
     height: 52px !important;
@@ -12579,5 +12644,178 @@ textarea.form-control {
         -moz-box-shadow: 0 0 0 0 rgba(23, 185, 120, 0);
         -webkit-box-shadow: 0 0 0 0 rgba(23, 185, 120, 0);
         box-shadow: 0 0 0 0 rgba(23, 185, 120, 0);
+    }
+}
+/* Enhanced Hero Section Background */
+.hero-wrap {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero-wrap .overlay {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 991.98px) {
+    .hero-wrap {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .hero-wrap::before {
+        background-image: 
+            linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    }
+}
+
+/* Subtle floating animation for hero section */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-wrap .slider-text .one-forth img {
+    animation: float 6s ease-in-out infinite;
+}
+/* Updated Navbar Styles */
+.ftco-navbar-light {
+    background: white !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ftco-navbar-light .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.ftco-navbar-light .navbar-brand {
+    color: #263b5e;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.ftco-navbar-light .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: #263b5e;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
+    color: #17b978;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #17b978;
+    transition: width 0.3s ease;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover::after,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active::after {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .ftco-navbar-light .navbar-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Responsive About Me Image */
+.ftco-about .img-about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftco-about .img-about .img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 991.98px) {
+    .ftco-about .row {
+        flex-direction: column;
+    }
+    
+    .ftco-about .img-about {
+        margin-bottom: 30px;
+        order: -1; /* Ensures image appears first on mobile */
+    }
+    
+    .ftco-about .img-about .img {
+        height: 300px;
+        max-width: 100%;
+    }
+    
+    .ftco-about .col-md-6.col-lg-6.pl-md-5 {
+        padding-left: 0 !important;
+        text-align: center;
+    }
+    
+    .ftco-about .text-about {
+        text-align: center;
+    }
+    
+    .ftco-about .text-about p {
+        text-align: left;
+        display: inline-block;
     }
 }
